@@ -1,0 +1,158 @@
+Table Creation
+
+1. Restaurant Table
+
+CREATE TABLE Restaurant (
+R_ID NUMBER PRIMARY KEY,
+R_Name VARCHAR2(100),
+R_Contact VARCHAR2(20)
+)
+DESC Restaurant
+
+
+2. RestaurantINFO Table
+
+CREATE TABLE RestaurantINFO (
+R_Name VARCHAR2(50) PRIMARY KEY,
+Address VARCHAR2(55)
+)
+DESC RestaurantINFO
+
+
+3. Customer Table
+
+CREATE TABLE Customer (
+Cus_ID NUMBER PRIMARY KEY,
+Cus_Name VARCHAR2(100),
+Cus_Contact VARCHAR2(20),
+R_ID NUMBER,
+CONSTRAINT fk_Restaurant FOREIGN KEY (R_ID) REFERENCES Restaurant(R_ID)
+)
+DESC Customer
+
+
+4. Waiter Table
+
+CREATE TABLE Waiter (
+W_ID NUMBER PRIMARY KEY,
+W_Name VARCHAR2(25),
+Cus_ID NUMBER,
+Order_No NUMBER,
+CONSTRAINT fk_Customer FOREIGN KEY (Cus_ID) REFERENCES Customer(Cus_ID),
+CONSTRAINT fk_Order FOREIGN KEY (Order_No) REFERENCES Orderr(Order_NO)
+
+)
+
+DESC Waiter
+
+5. Order Table
+
+CREATE TABLE Orderr(
+Order_NO NUMBER PRIMARY KEY,
+No_Items NUMBER
+
+)
+DESC order
+
+6. OrderINFO Table
+
+CREATE TABLE OrderINEO (
+No_Items NUMBER PRIMARY KEY,
+ord_Time TIMESTAMP
+)
+
+DESC OrderINFO
+
+7. Food Table
+
+CREATE TABLE Food (
+Food_NO NUMBER PRIMARY KEY,
+Quantity NUMBER,
+Description VARCHAR2(255),
+Order_NO NUMBER,
+CONSTRAINT fk_Food_Order FOREIGN KEY (Order_NO) REFERENCES orderr(Order_NO)
+
+)
+
+DESC Food
+
+8. FoodDetails Table
+
+CREATE TABLE FoodDetails (
+Quantity NUMBER PRIMARY KEY,
+Price NUMBER,Food_NO NUMBER,
+  CONSTRAINT fk_fooddetails_food FOREIGN KEY (Food_NO)
+  REFERENCES Food(Food_NO)
+
+);
+
+
+
+CREATE TABLE FoodDetails (
+Quantity NUMBER PRIMARY KEY,
+Price NUMBER
+
+)
+
+DESC FoodDetails
+
+9. Chef Table
+
+CREATE TABLE Chef (
+Chef_ID NUMBER PRIMARY KEY,
+Chef_Name VARCHAR2(100),
+Order_NO NUMBER,
+CONSTRAINT fk_Chef_Order FOREIGN KEY (Order_NO) REFERENCES orderr(Order_NO)
+)
+DESC Chef
+
+10. Bill Table
+
+CREATE TABLE Bill (
+B_NO NUMBER PRIMARY KEY,
+B_Price NUMBER,
+Ord_Detail VARCHAR2(55),
+Cus_ID NUMBER,
+CONSTRAINT fk_Customer_Bill FOREIGN KEY (Cus_ID) REFERENCES Customer(Cus_ID)
+
+)
+
+DESC Bill
+
+11. BillDescription Table
+
+CREATE TABLE BillDescription (
+Price NUMBER PRIMARY KEY,
+Vat VARCHAR2(15)
+
+)
+
+DESC BillDescription
+
+12. Manager Table
+
+CREATE TABLE Manager (
+Man_ID NUMBER PRIMARY KEY,
+Man_Name VARCHAR2(50)
+)
+
+DESC Manager
+
+13. ManagerDetails Table
+
+CREATE TABLE ManagerDetails (
+R_ID NUMBER PRIMARY KEY,
+Man_ID NUMBER,
+CONSTRAINT fk_Manager_Details FOREIGN KEY (Man_ID) REFERENCES Manager(Man_ID)
+)
+DESC ManagerDetails
+
+14.WaiterManage Table
+
+CREATE TABLE WaiterManage (
+W_ID NUMBER PRIMARY KEY,
+W_Name VARCHAR2(50),
+Man_ID NUMBER,
+CONSTRAINT fk_Manager_Waiter FOREIGN KEY (Man_ID) REFERENCES Manager(Man_ID)
+)
+DESC WaiterManage
