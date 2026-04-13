@@ -1,0 +1,246 @@
+1. Value Insertion of table Restaurant. 
+INSERT INTO Restaurant (R_ID, R_Name, R_Contact) VALUES (1110, 'CHEFS TABLE COURTSIDE', '0171');
+INSERT INTO Restaurant (R_ID, R_Name, R_Contact) VALUES (1111, 'HAWA', '0172');
+INSERT INTO Restaurant (R_ID, R_Name, R_Contact) VALUES (1112, 'KHANAS', '0173');
+INSERT INTO Restaurant (R_ID, R_Name, R_Contact) VALUES (1113, 'CHILLOX', '0174');
+INSERT INTO Restaurant (R_ID, R_Name, R_Contact) VALUES (1114, 'THE GREEN LOUNGE', '0175');
+INSERT INTO Restaurant (R_ID, R_Name, R_Contact) VALUES (1115, 'ITALIAN', '0176');
+SELECT *FROM RESTAURANT
+
+2. Value Insertion of table Customer. 
+
+INSERT INTO Customer (Cus ID, Cus Name, Cus Contact, R_ID) VALUES (301, 'Jubayer', '0161', 1110);
+INSERT INTO Customer (Cus ID, Cus Name, Cus Contact, R_ID) VALUES (302, 'Riyad', '0162', 1110);
+INSERT INTO Customer (Cus ID, Cus Name, Cus Contact, R_ID) VALUES (303, 'Niloy', '0163', 1110);
+INSERT INTO Customer (Cus ID, Cus Name, Cus Contact, R_ID) VALUES (304, 'Pushpita', '0164', 1110);
+INSERT INTO Customer (Cus ID, Cus Name, Cus Contact, R_ID) VALUES (305, 'Imtiaz', '0165', 1110);
+INSERT INTO Customer (Cus ID, Cus Name, Cus Contact, R_ID) VALUES (306, 'Kazi', '0166', 1110);
+SELECT *FROM CUSTOMER
+
+3. Value Insertion of table Orderr. 
+
+INSERT INTO Orderr (Order_NO, No_Items) VALUES (1, 3);
+INSERT INTO Orderr (Order_NO, No_Items) VALUES (2, 9);
+INSERT INTO Orderr (Order_NO, No_Items)VALUES (3, 1);
+INSERT INTO Orderr (Order_NO, No_Items) VALUES (4, 4);
+INSERT INTO Orderr (Order_NO, No_Items) VALUES (5, 1);
+INSERT INTO Orderr (Order_NO, No_Items) VALUES (6, 1);
+
+SELECT *FROM ORDERR
+
+4. Value Insertion of table OrderINFO. 
+INSERT INTO OrderINFO (No_Items, Ord_Time) VALUES (1, TO_TIMESTAMP('2024-05-14 10:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO OrderINFO (No_Items, Ord_Time) VALUES (2, TO_TIMESTAMP('2024-05-14 10:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO OrderINFO (No_Items, Ord_Time) VALUES (3, TO_TIMESTAMP('2024-05-14 10:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO OrderINFO (No_Items, Ord_Time) VALUES (4, TO_TIMESTAMP('2024-05-14 10:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO OrderINFO (No_Items, Ord_Time) VALUES (5, TO_TIMESTAMP('2024-05-14 10:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO OrderINFO (No_Items, Ord_Time) VALUES (9, TO_TIMESTAMP('2024-05-14 10:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+
+
+INSERT INTO OrderINFO (No_Items, Ord_Time) VALUES (1, '5MINS');
+INSERT INTO OrderINFO (No_Items, Ord_Time) VALUES (2, '2MINS');
+INSERT INTO OrderINFO (No_Items, Ord_Time) VALUES (3, '10MINS');
+INSERT INTO OrderINFO (No_Items, Ord_Time) VALUES (4, '2MINS');
+INSERT INTO OrderINFO (No_Items, Ord_Time) VALUES (5, '10MINS');
+INSERT INTO OrderINFO (No_Items, Ord_Time) VALUES (9, '20MINS');
+SELECT* FROM OrderINFO
+
+
+
+5. Value Insertion of table Waiter.
+INSERT INTO Waiter (W_ID, W Name, Cus ID, Order No) VALUES (1001, 'ROY', 303, 1);
+INSERT INTO Waiter (W_ID, W Name, Cus ID, Order No) VALUES (1002, 'RAJ', 302, 2);
+INSERT INTO Waiter (W_ID, W Name, Cus ID, Order No) VALUES (1003, 'NILOY', 301, 5);
+INSERT INTO Waiter (W_ID, W Name, Cus ID, Order No) VALUES (1004, 'KARIM', 305, 3);
+INSERT INTO Waiter (W_ID, W Name, Cus ID, Order No) VALUES (1005, 'SHANTO', 306, 2);
+INSERT INTO Waiter (W_ID, W Name, Cus ID, Order No) VALUES (1006, 'ROY', 304, 4);
+INSERT INTO Waiter (W_ID, W Name, Cus ID, Order No) VALUES (1007, 'JUHAB', 302, 3);
+INSERT INTO Waiter (W_ID, W Name, Cus ID, Order No) VALUES (1008, 'SAGAR', 303, 5);
+SELECT *FROM WAITER
+
+6. Value Insertion of table RestaurantINFO. 
+
+INSERT INTO RestaurantINFO (R_Name, Address) VALUES ('CHEFS TABLE COURTSIDE', 'GULSHAN');
+INSERT INTO RestaurantINFO (R_Name, Address) VALUES ('HAWA', 'PURBACHAL');
+INSERT INTO RestaurantINFO (R_Name, Address) VALUES ('KHANAS', 'UTTARA');
+INSERT INTO RestaurantINFO (R_Name, Address) VALUES ('CHILLOX', 'DHANMONDHI');
+INSERT INTO RestaurantINFO (R_Name, Address) VALUES ('THE GREEN LOUNGE', 'SHAHBAGH');
+INSERT INTO RestaurantINFO (R Name, Address) VALUES ('ITALIAN', 'KHILKHET');
+SELECT *FROM RESTAURANTINFO
+
+
+7. Value Insertion of table Food.
+
+INSERT INTO Food (Food_NO, Quantity, Description, Order_NO) VALUES (800, 2, 'FISH_CUTLET', 5);
+
+INSERT INTO Food (Food_NO, Quantity, Description, Order_NO) VALUES (809, 2, 'CHICKEN_WITH_BREADBALL', 2);
+
+INSERT INTO Food (Food_NO, Quantity, Description, Order_NO) VALUES (810, 1, 'CORN_KABAB', 3);
+
+INSERT INTO Food (Food_NO, Quantity, Description, Order_NO) VALUES (815, 2, 'PANEER_MASALA', 4);
+
+INSERT INTO Food (Food_NO, Quantity, Description, Order_NO) VALUES (816, 2, 'TANDOORI_MUSHROOM', 1);
+
+INSERT INTO Food (Food_NO, Quantity, Description, Order_NO) VALUES (819, 3, 'MALAI_KOFTA', 6);
+
+SELECT *FROM FOOD
+
+
+8. Value Insertion of table Chef. 
+
+INSERT INTO Chef (Chef_ID, Chef_Name, Order_NO) VALUES (401, 'KHAN', 1);
+
+INSERT INTO Chef (Chef_ID, Chef_Name, Order_NO) VALUES (402, 'KHAN', 1);
+
+INSERT INTO Chef (Chef_ID, Chef_Name, Order_NO) VALUES (403, 'JAD', 3);
+
+INSERT INTO Chef (Chef_ID, Chef_Name, Order_NO) VALUES (404, 'JAD', 4);
+
+INSERT INTO Chef (Chef_ID, Chef_Name, Order_NO) VALUES (405, 'PRODIP', 1);
+
+INSERT INTO Chef (Chef ID, Chef Name, Order NO) VALUES (406, 'SAM', 6);
+
+SELECT *FROM CHEF
+
+
+9. Value Insertion of table Bill. 
+
+
+INSERT INTO Bill (B_NO, B_Price, Ord_Detail, Cus_ID) VALUES (10, 600, 'FISH_CUTLET', 301);
+
+INSERT INTO Bill (B_NO, B_Price, Ord_Detail, Cus_ID) VALUES (12, 350, 'PANEER_MASALA', 301);
+
+INSERT INTO Bill (B_NO, B_Price, Ord_Detail, Cus_ID) VALUES (14, 250, 'TANDOORI_MUSHROOM', 305);
+
+INSERT INTO Bill (B_NO, B_Price, Ord_Detail, Cus_ID) VALUES (16, 800, 'MALAI_KOFTA', 303);
+
+INSERT INTO Bill (B_NO, B_Price, Ord_Detail, Cus_ID) VALUES (18, 800, 'MALAI_KOFTA', 304);
+
+INSERT INTO Bill (B_NO, B_Price, Ord_Detail, Cus_ID) VALUES (20, 600, 'FISH_CUTLET', 303);
+
+SELECT *FROM BILL
+
+
+10. Value Insertion of table BillDescription. 
+
+INSERT INTO BillDescription (Price, Vat) VALUES (250, '5');
+
+INSERT INTO BillDescription (Price, Vat) VALUES (350, '10');
+
+INSERT INTO BillDescription (Price, Vat) VALUES (600, '20');
+
+INSERT INTO BillDescription (Price, Vat) VALUES (800, '20');
+
+SELECT *FROM BILLDESCRIPTION
+
+
+11. Value Insertion of table FoodDetails. 
+
+INSERT INTO FoodDetails (Food_NO, Quantity, Price) VALUES (800, 2, 250);
+
+INSERT INTO FoodDetails (Food_NO, Quantity, Price) VALUES (800, 3, 350);
+
+INSERT INTO FoodDetails (Food_NO, Quantity, Price) VALUES (810, 1, 800);
+
+INSERT INTO FoodDetails (Food_NO, Quantity, Price) VALUES (810, 4, 600);
+
+INSERT INTO FoodDetails (Food_NO, Quantity, Price) VALUES (815, 5, 600);
+
+INSERT INTO FoodDetails (Food_NO, Quantity, Price) VALUES (816, 6, 800);
+
+SELECT *FROM FOODDETAILS
+
+
+12. Value Insertion of table ManagerDetails.
+
+INSERT INTO ManagerDetails (R_ID, Man_ID) VALUES (1110, 2248);
+
+INSERT INTO ManagerDetails (R_ID, Man_ID) VALUES (1111, 2249);
+
+INSERT INTO ManagerDetails (R_ID, Man_ID) VALUES (1112, 2248);
+
+INSERT INTO ManagerDetails (R_ID, Man_ID) VALUES (1113, 2251);
+
+INSERT INTO ManagerDetails (R_ID, Man_ID) VALUES (1114, 2252);
+
+INSERT INTO ManagerDetails (R_ID, Man_ID) VALUES (1115, 2251);
+
+SELECT *FROM MANAGERDETAILS
+
+13. Value Insertion of table WaiterManage.
+
+INSERT INTO WaiterManage (W_ID, W_Name, Man_ID) VALUES (1001, 'ROY', 2248);
+
+INSERT INTO WaiterManage (W_ID, W_Name, Man_ID) VALUES (1002, 'RAJ', 2249);
+
+INSERT INTO WaiterManage (W_ID, W_Name, Man_ID) VALUES (1003, 'NILOY', 2251);
+
+INSERT INTO WaiterManage (W_ID, W_Name, Man_ID) VALUES (1004, 'KARIM', 2252);
+
+INSERT INTO WaiterManage (W_ID, W_Name, Man_ID) VALUES (1005, 'SHANTO', 2250);
+
+INSERT INTO WaiterManage (W_ID, W Name, Man ID) VALUES (1006, 'ROY', 2253);
+
+SELECT *FROM WAITERMANAGE
+
+14. Value Insertion of table Manager.
+
+INSERT INTO Manager (Man ID, Man Name) VALUES (2248, 'RONY');
+
+INSERT INTO Manager (Man ID, Man Name) VALUES (2249, 'JON');
+
+INSERT INTO Manager (Man ID, Man Name) VALUES (2250, 'RAKIB');
+
+INSERT INTO Manager (Man_ID, Man_Name) VALUES (2251, 'ESHAN');
+
+INSERT INTO Manager (Man ID, Man Name) VALUES (2252, 'RONY');
+
+INSERT INTO Manager (Man ID, Man Name) VALUES (2253, 'NIROB');
+SELECT *FROM MANAGER
+
+
+
+Query Test
+
+
+
+
+
+SELECT PRICE, VAT FROM BillDescription WHERE PRICE BETWEEN 350 AND 800.
+
+SELECT R_ID, R_NAME FROM RESTAURANT WHERE R_CONTACT=0171
+
+SELECT ' Orderr '| |ORDER_NO | | ' Has ' | | DESCRIPTION AS Order Description FROM FOOD
+WHERE ORDER_NO IN (1, 2, 3);
+
+
+
+
+SELECT CUS_NAME, CUS_ID FROM CUSTOMER WHERE CUS_NAME LIKE '%i%' OR CUS_NAME LIKE '%a%r%'
+
+
+
+
+
+
+
+
+
+
+
+SELECT FOOD_NO, QUANTITY, PRICE FROM FoodDetails WHERE FOOD_NO>=815 OR PRICE=350
+
+SELECT W_NAME, W_ID, ORDER_NO FROM Waiter ORDER BY ORDER_NO DESC
+
+
+SELECT W_NAME, W_ID, ORDER_NO FROM Waiter ORDER BY W_ID ASC
+
+SELECT FOOD_NO, QUANTITY, CONCAT (DESCRIPTION, ORDER_NO) AS ORDEREDFOODNAME FROM FOOD
+
+SELECT R_NAME, R_ID FROM Restaurant WHERE SUBSTR(R_NAME,1,4) ='HAWA'
+
+
+
+
+
+
